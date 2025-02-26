@@ -13,7 +13,7 @@
 
 ## Crear un Usuario
 
-Para crear un usuario, usa el siguiente JSON:
+- Para crear un usuario, usa el siguiente JSON:
 
 ```json
 {
