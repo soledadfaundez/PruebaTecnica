@@ -1,10 +1,4 @@
-Aquí tienes cómo podrías formatear esa información en un archivo `README.md`:
-
-```markdown
-# Instrucciones de Uso
-
-## Comandos
-
+##  Instrucciones de Uso
 - Para limpiar, instalar y ejecutar la aplicación sin pruebas:
 
   ```bash
