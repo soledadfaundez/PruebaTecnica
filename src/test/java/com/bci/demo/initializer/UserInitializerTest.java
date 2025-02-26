@@ -58,7 +58,7 @@ public class UserInitializerTest {
         // Verificar los valores del usuario capturado
         assertEquals("Admin User", capturedUser.getName());
         assertEquals("admin@example.com", capturedUser.getEmail());
-        assertEquals("Default", capturedUser.getPassword());
+        assertEquals("kjkk&&h%mmEa54", capturedUser.getPassword());
         // Si necesitas verificar los teléfonos, también puedes hacerlo aquí
         assertEquals(2, capturedUser.getPhones().size());
         assertEquals("1234567", capturedUser.getPhones().get(0).getNumber());

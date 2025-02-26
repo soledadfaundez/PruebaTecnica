@@ -1,9 +1,20 @@
 package com.bci.demo.request;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
+
 public class PhoneRequest {
 
+    @NotNull(message = "{phone.number.required}")
+    @NotBlank(message = "{phone.number.not.blank}")
     private String number;
+
+    @NotNull(message = "{phone.citycode.required}")
+    @NotBlank(message = "{phone.citycode.not.blank}")
     private String citycode;
+
+    @NotNull(message = "{phone.contrycode.required}")
+    @NotBlank(message = "{phone.contrycode.not.blank}")
     private String contrycode;
 
     // Constructor por defecto (No-argument constructor)

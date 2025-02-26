@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -27,7 +29,7 @@ public class UserController {
     private UserMapper userMapper;
 
     @PostMapping("")
-    public ResponseEntity<ApiResponse<UserResponse>> save(@RequestBody UserRequest userRequest) {
+    public ResponseEntity<ApiResponse<UserResponse>> save(@Valid @RequestBody UserRequest userRequest) {
         User user = userMapper.map(userRequest);
         User savedUser = userService.save(user);
 

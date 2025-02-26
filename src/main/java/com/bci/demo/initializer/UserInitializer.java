@@ -26,7 +26,7 @@ public class UserInitializer implements CommandLineRunner {
             User user = new User();
             user.setName(name);
             user.setEmail(alias + "@example.com");
-            user.setPassword("Default");
+            user.setPassword("kjkk&&h%mmEa54");
 
             // SFC: Crear algunos teléfonos asociados al usuario
             Phone phone1 = new Phone(null, "1234567", "1", "57", user);

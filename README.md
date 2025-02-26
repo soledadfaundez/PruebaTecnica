@@ -1,4 +1,7 @@
-##  Instrucciones de Uso
+## Instrucciones de Uso
+
+## Comandos
+
 - Para limpiar, instalar y ejecutar la aplicación sin pruebas:
 
   ```bash
@@ -19,7 +22,7 @@
 {
   "email": "sole.faundez.c@gmail.com",
   "name": "Soledad",
-  "password": "123456",
+  "password": "gghhm&LLL6677h",
   "phones": [
     {
       "citycode": "111",

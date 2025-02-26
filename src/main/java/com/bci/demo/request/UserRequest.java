@@ -1,12 +1,25 @@
 package com.bci.demo.request;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 public class UserRequest {
 
+    @NotNull(message = "{user.name.required}")
+    @NotBlank(message = "{user.name.not.blank}")
     private String name;
+
+    @NotNull(message = "{user.email.required}")
+    @NotBlank(message = "{user.email.not.blank}")
     private String email;
+
+    @NotNull(message = "{user.password.required}")
+    @NotBlank(message = "{user.password.not.blank}")
     private String password;
+
+    @Valid // This will trigger validation for each element in the list
     private List<PhoneRequest> phones; // SFC: Lista de teléfonos opcional
 
     // Constructor por defecto (No-argument constructor)

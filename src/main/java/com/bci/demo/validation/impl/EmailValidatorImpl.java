@@ -15,17 +15,18 @@ public class EmailValidatorImpl implements EmailValidator {
 
     // Expresión regular para validar el correo
     @Value("${email.regex}")
-    private String EMAIL_REGEX;
+    private String emailRegex;
 
     private Pattern pattern;
 
     @PostConstruct
     public void init() {
         // Inicializa el patrón con el valor de EMAIL_REGEX
-        pattern = Pattern.compile(EMAIL_REGEX);
+        pattern = Pattern.compile(emailRegex);
     }
 
     // Método para validar el correo
+    @Override
     public boolean isValidEmail(String email) {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
