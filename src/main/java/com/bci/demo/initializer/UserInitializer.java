@@ -1,7 +1,7 @@
 package com.bci.demo.initializer;
 
-import com.bci.demo.model.Phone;
-import com.bci.demo.model.User;
+import com.bci.demo.request.PhoneRequest;
+import com.bci.demo.request.UserRequest;
 import com.bci.demo.service.UserService;
 
 import java.util.Arrays;
@@ -23,17 +23,20 @@ public class UserInitializer implements CommandLineRunner {
     @Override
     public void run(String... args) {
         userConfig.getData().forEach((alias, name) -> {
-            User user = new User();
-            user.setName(name);
-            user.setEmail(alias + "@example.com");
-            user.setPassword("kjkk&&h%mmEa54");
+            // Crear UserRequest con datos básicos
+            UserRequest userRequest = new UserRequest();
+            userRequest.setName(name);
+            userRequest.setEmail(alias + "@example.com");
+            userRequest.setPassword("kjkk&&h%mmEa54");
 
-            // SFC: Crear algunos teléfonos asociados al usuario
-            Phone phone1 = new Phone(null, "1234567", "1", "57", user);
-            Phone phone2 = new Phone(null, "7654321", "2", "57", user);
+            // Crear algunos teléfonos asociados al usuario
+            PhoneRequest phone1 = new PhoneRequest("1234567", "1", "57");
+            PhoneRequest phone2 = new PhoneRequest("7654321", "2", "57");
 
-            user.setPhones(Arrays.asList(phone1, phone2));
-            userService.save(user);
+            userRequest.setPhones(Arrays.asList(phone1, phone2));
+
+            // Llamar al servicio con UserRequest
+            userService.save(userRequest);
         });
     }
 }

@@ -28,6 +28,9 @@ public class ApiResponse<T> {
         this.statusCode = statusCode;
     }
 
+    public ApiResponse() {
+    }
+
     // Getters y setters
     public String getMensaje() {
         return mensaje;
@@ -49,7 +52,7 @@ public class ApiResponse<T> {
         return statusCode;
     }
 
-    public void setStatusCode(Integer statusCode) {
-        this.statusCode = statusCode;
+    public void setStatusCode(Integer ok) {
+        this.statusCode = ok;
     }
 }
